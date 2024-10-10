@@ -3,6 +3,7 @@
 function procesar_prerequisitos() {
 
     $prerequisitos = fopen("prerequisitos.csv", "r"); // Abrir archivo en modo lectura
+    stream_filter_append($prerequisitos, 'convert.iconv.ISO-8859-1/UTF-8'); // Convertir la codificación a UTF-8
     $array_datos_buenos = [];
     $array_datos_malos = [];
 
@@ -19,7 +20,7 @@ function procesar_prerequisitos() {
         }
 
         $es_valido = is_string($datos[0]) && preg_match('/^[A-Z0-9]+$/', $datos[0]) &&  // Plan solo letras mayúsculas y números
-                    is_string($datos[1]) && preg_match('/^[A-Z0-9]+$/', $datos[1]) &&  // Asignatura solo letras mayúsculas y números
+                    is_string($datos[1]) && preg_match('/^[A-Z0-9-záéíóúÁÉÍÓÚ\s]+$/', $datos[1]) &&  // Asignatura solo letras mayúsculas y números
                     ctype_digit($datos[3]); // Nivel solo números enteros
 
         if ($es_valido) {
