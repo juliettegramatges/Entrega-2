@@ -1,9 +1,9 @@
 <?php
 
 function procesar_asignaturas() {
-    $asignaturas = fopen("Malla.csv", "r");
-    $archivo_buenos = fopen("mallas_buenas.csv", "w");
-    $archivo_malos = fopen("mallas_malas.csv", "w");
+    $asignaturas = fopen("cargadores/originales/Malla.csv", "r");
+    $archivo_buenos = fopen("data/mallas_buenas.csv", "w");
+    $archivo_malos = fopen("data/mallas_malas.csv", "w");
 
     while (($datos = fgetcsv($asignaturas)) !== FALSE) {
         if (count($datos) < 4) {

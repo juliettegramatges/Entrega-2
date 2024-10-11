@@ -1,10 +1,10 @@
 <?php
 
 function procesar_docentes_planificados() {
-    $docentes = fopen("docentes planificados.csv", "r");
+    $docentes = fopen("cargadores/originales/docentes planificados.csv", "r");
     stream_filter_append($docentes, 'convert.iconv.ISO-8859-1/UTF-8');
-    $archivo_buenos = fopen("docentes planificados_buenos.csv", "w");
-    $archivo_malos = fopen("docentes planificados_malos.csv", "w");
+    $archivo_buenos = fopen("data/docentes planificados_buenos.csv", "w");
+    $archivo_malos = fopen("data_malo/docentes planificados_malos.csv", "w");
 
     while (($datos = fgetcsv($docentes)) !== FALSE) {
         if (count($datos) < 16) {
@@ -12,9 +12,9 @@ function procesar_docentes_planificados() {
             continue;
         }
 
-        $es_valido = ctype_digit($datos[0]) && strlen($datos[0]) == 8 && // Plan solo letras mayúsculas
-                    is_string($datos[1]) && preg_match('/^[A-Za-zÁÉÍÓÚáéíóú]+(?: [A-Za-zÁÉÍÓÚáéíóú]+)*$/', $datos[1]) &&
-                    is_string($datos[2]) && preg_match('/^[A-Za-zÁÉÍÓÚáéíóú]+(?: [A-Za-zÁÉÍÓÚáéíóú]+)*$/', $datos[2]) &&
+        $es_valido = ctype_digit($datos[0]) && strlen($datos[0]) == 8 && // Solo enteros de largo 8
+                    is_string($datos[1]) && preg_match('/^[A-Za-zÁÉÍÓÚáéíóú]+(?: [A-Za-zÁÉÍÓÚáéíóú]+)*$/', $datos[1]) && // Solo texto
+                    is_string($datos[2]) && preg_match('/^[A-Za-zÁÉÍÓÚáéíóú]+(?: [A-Za-zÁÉÍÓÚáéíóú]+)*$/', $datos[2]) && // Solo texto
                     ctype_digit($datos[3]) &&
                     is_string($datos[4]) && preg_match('/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', $datos[4]) &&
                     is_string($datos[5]) && preg_match('/^[a-zA-Z0-9._%+-]+@lamejor\.com$/', $datos[5]) &&

@@ -1,9 +1,9 @@
 <?php
 
-function corregir_asignaturas() {
+function corregir_docentes() {
     // Abrir archivos
-    $archivo_buenos = fopen("asignaturas_buenas.csv", "a");
-    $archivo_malos = fopen("asignaturas_malas.csv", "r");
+    $archivo_buenos = fopen("data/docentes planificados_buenos.csv", "a");
+    $archivo_malos = fopen("data_malo/docentes planificados_malos.csv", "r");
     stream_filter_append($archivo_buenos, 'convert.iconv.ISO-8859-1/UTF-8');
 
     // Inicializar el array para almacenar datos actualizados

@@ -2,10 +2,10 @@
 
 function procesar_asignaturas() {
     // Abrir archivos
-    $asignaturas = fopen("Asignaturas.csv", "r");
+    $asignaturas = fopen("cargadores/originales/Asignaturas.csv", "r");
     stream_filter_append($asignaturas, 'convert.iconv.ISO-8859-1/UTF-8');
-    $archivo_buenos = fopen("asignaturas_buenas.csv", "w");
-    $archivo_malos = fopen("asignaturas_malas.csv", "w");
+    $archivo_buenos = fopen("data/asignaturas_buenas.csv", "w");
+    $archivo_malos = fopen("data_malo/asignaturas_malas.csv", "w");
 
     // Escribir encabezados en el archivo de buenos
     $encabezados = ["Plan", "Asignatura id", "Asignatura", "Nivel"];
