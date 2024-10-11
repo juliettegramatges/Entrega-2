@@ -1,6 +1,6 @@
 <?php
 
-    include('../config/conexion.php');
+    include('config/conexion.php');
 
     $email = $_POST['email'];
     $password = $_POST['password']; // Acá deben hashear la contraseña: https://www.php.net/manual/es/function.password-hash.php 
@@ -27,4 +27,4 @@
   
   ?>
 
-<?php include('../templates/footer_admin.html'); ?>
+<?php include('templates/footer_admin.html'); ?>

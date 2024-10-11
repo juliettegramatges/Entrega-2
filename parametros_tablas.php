@@ -5,20 +5,18 @@ $path_tablas = array(
     'docentes' => 'data/docentes planificados_buenos.csv',
 );
 
-# ASIGNATURAS: 
 
 $tablas_iniciales = array(
 
         'usuario' => '
             id_usuario INT PRIMARY KEY, 
-            email VARCHAR(255) NOT NULL, 
+            correo VARCHAR(255) NOT NULL, 
             contraseña VARCHAR(255) NOT NULL
         ',
 
         'persona' => '
             id_persona INT PRIMARY KEY, 
             run INT NOT NULL, 
-            dv CHAR(1) NOT NULL, 
             nombre VARCHAR(255) NOT NULL, 
             apellido VARCHAR(255) NOT NULL, 
             correo_personal VARCHAR(255), 
@@ -28,9 +26,12 @@ $tablas_iniciales = array(
 
         'estudiante' => '
             cohorte VARCHAR(255) NOT NULL, 
+            dv CHAR(1) NOT NULL, 
+            segundo_apellido VARCHAR(255),
             estado_bloqueo BOOLEAN NOT NULL,
             ultimo_logro VARCHAR(255) NOT NULL,
             ultima_carga INT NOT NULL,
+            numero_alumo INT NOT NULL,
             FOREIGN KEY (id_persona) REFERENCES persona(id_persona)
         ',
         
@@ -40,7 +41,8 @@ $tablas_iniciales = array(
             grado_academico VARCHAR(255),
             jerarquia VARCHAR(255), 
             cargo VARCHAR(255),
-            jornada VARCHAR(255)
+            jornada_diurna BOOLEAN
+            jornda_vespertina BOOLEAN
         '
     );
     
