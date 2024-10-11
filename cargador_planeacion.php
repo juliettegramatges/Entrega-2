@@ -20,7 +20,7 @@ function procesar_planeacion() {
         }
 
         $es_valido = // Periodo: fecha de tipo YYYY-MM
-            preg_match('/^\d{4}-\d{2}$/', $datos[0]) &&
+            preg_match('/^\d{4}-\d{2}$/', $datos[0]) && 
             // Sede: texto de máximo 50 caracteres
             strlen($datos[1]) <= 50 &&
             // Facultad: texto de máximo 50 caracteres
@@ -48,27 +48,29 @@ function procesar_planeacion() {
             // Hora Inicio: hora de tipo HH:MM
             preg_match('/^\d{2}:\d{2}$/', $datos[13]) &&
             // Hora Fin: hora de tipo HH:MM, después de Hora Inicio
-            $datos[14] > $datos[13] ;
-            // Fecha Inicio: fecha de tipo DD/MM/YYYY
-            preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $datos[15]) &&
-            // Fecha Fin: fecha de tipo DD/MM/YYYY, después de Fecha Inicio
-            $datos[16] > $datos[15] ;
-            // Lugar: texto de máximo 50 caracteres
+            $datos[14] > $datos[13] &&
+            // Fecha Inicio: fecha de tipo DD/MM/YY
+            preg_match('/^\d{2}\/\d{2}\/\d{2}$/', $datos[15]) &&
+            // Fecha Fin: fecha de tipo DD/MM/YY, después de Fecha Inicio
+            $datos[16] > $datos[15] &&
+            // Lugar: texto de máximo 50 caracteres. no vacío
             strlen($datos[17]) <= 50 &&
             // Edificio: texto de máximo 50 caracteres
             strlen($datos[18]) <= 50 &&
-            // Profesor Principal: S
+            // Profesor Principal: S ACÁ SE CAEN 12
             in_array($datos[19], ['S']) &&
-            // RUN: entero de 7 o 8 dígitos
+            // RUN: entero de 7 o 8 dígitos ACÁ SE CAEN COMO 430. MUCHOS POR NA Y ALGUNOS POR RUT 130 MILLONES
             preg_match('/^\d{7,8}$/', $datos[20]) &&
             // Nombre Docente: texto de máximo 50 caracteres
             strlen($datos[21]) <= 50 &&
             // 1er Apellido Docente: texto de máximo 50 caracteres
-            strlen($datos[22]) <= 50 &&
-            // 2do Apellido Docente: texto de máximo 50 caracteres. No puede ser 0 
-            strlen($datos[23]) <= 50 && $datos[23] != 0 &&
+            strlen($datos[22]) <= 50 && 
+            // 2do Apellido Docente: texto de máximo 50 caracteres. No puede ser 0. ACÁ SE CAEN 152
+            // CREO Q HAY Q REEMPLAZAR LOS 0 POR NA
+            strlen($datos[23]) <= 50 && preg_match('/^[A-Za-záéíóúÁÉÍÓÚñÑ\s\-]+$/', $datos[23]) &&
             // Jerarquización: texto de máximo 5 caracteres
             strlen($datos[24]) <= 5;
+            
 
 
         if ($es_valido) {
