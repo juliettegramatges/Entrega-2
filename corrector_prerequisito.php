@@ -2,14 +2,14 @@
 
 function corregirPrerequisitos() {
     $inputFile = 'prerequisitos_malas.csv';
-    $outputFile = 'prerequisitos_corregidas.csv';
+    $outputFile = 'prerequisitos_buenas.csv';
 
     $inputHandle = fopen($inputFile, 'r');
     if ($inputHandle === false) {
         die("Error al abrir el archivo de entrada.");
     }
 
-    $outputHandle = fopen($outputFile, 'w');
+    $outputHandle = fopen($outputFile, 'a');
     if ($outputHandle === false) {
         fclose($inputHandle);
         die("Error al abrir el archivo de salida.");
