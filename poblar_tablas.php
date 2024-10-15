@@ -12,20 +12,20 @@ try {
 
     if ($file_docentes) {
         echo "INICIO DE INSERCIÓN DE DATOS EN LA TABLA ACADEMICO\n";
-        $header = fgetcsv($file_docentes); // Saltar la primera línea (cabecera)
 
-        while (($data = fgetcsv($file_docentes, 0, ',')) !== false) {
+        while (($data = fgetcsv($file_docentes, 0, ';')) !== false) {
             // Verificar restricciones antes de insertar
             for ($i = 0; $i < count($data); $i++) {
-                if ($data[$i] == '') {
+                if ($data[$i] === '') {
                     $data[$i] = null; // Convertir campos vacíos en NULL
                 }
             }
 
-            $run = $data[0];
+
+            $run = intval($data[0]);
             $nombre = $data[1];
             $apellido = $data[2];
-            $telefono = $data[3];
+            $telefono = intval($data[3]);
             $correo_personal = $data[4];
             $correo_institucional = $data[5];
             $dedicacion = $data[6];
@@ -42,32 +42,47 @@ try {
             // Insertar en la tabla persona
             $insert_persona = [
                 'run' => $run,
-                'dv' => !empty($dv) ? $dv : null, // Establecer como null si está vacío
                 'nombre' => $nombre,
                 'apellido' => $apellido,
                 'correo_personal' => $correo_personal,
                 'correo_institucional' => $correo_institucional,
-                'telefono' => $telefono,
+                'telefono' => $telefono
             ];
 
-            // Realizar la inserción en persona
-            insertar_en_tabla($db, 'persona', $insert_persona);
+            $columnas = ['run', 'nombre', 'apellido', 'correo_personal', 'correo_institucional', 'telefono'];
 
-            // Obtener el id_persona de la última inserción
-            $id_persona = $db->lastInsertId();
+
+
+            // Realizar la inserción en persona
+            insertar_en_tabla($db, 'persona', $insert_persona, $columnas);
 
             // Insertar en la tabla academico
+
+
+            // Determinar qué jornada está activa
+            if (!empty($jornada_diurna) && empty($jornada_vespertina)) {
+                $jornada = 'diurna';
+            } elseif (empty($jornada_diurna) && !empty($jornada_vespertina)) {
+                $jornada = 'vespertina';
+            } else {
+                $jornada = null; // O algún valor predeterminado si ambos están vacíos
+            }
             $insert_academico = [
-                'id_persona' => $id_persona,
                 'contrato' => $contrato,
                 'grado_academico' => $grado_academico,
                 'jerarquia' => $jerarquia,
                 'cargo' => $cargo,
-                'jornada' => $jornada_diurna, // o $jornada_vespertina según sea necesario
+                'jornada' => $jornada,
             ];
 
+
+
+
+            $columnas = ['contrato', 'grado_academico', 'jerarquia', 'cargo', 'jornada'];
+
+
             // Realizar la inserción en academico
-            insertar_en_tabla($db, 'academico', $insert_academico);
+            insertar_en_tabla($db, 'academico', $insert_academico, $columnas);
         }
         fclose($file_docentes);
     } else {
@@ -81,12 +96,10 @@ try {
     $file_estudiantes = fopen($path_estudiantes, 'r');
 
     if ($file_estudiantes) {
-        $header = fgetcsv($file_estudiantes); // Saltar la primera línea (cabecera)
-
         while (($data = fgetcsv($file_estudiantes, 0, ',')) !== false) {
             // Verificar restricciones antes de insertar
             for ($i = 0; $i < count($data); $i++) {
-                if ($data[$i] == '') {
+                if ($data[$i] === "") {
                     $data[$i] = null; // Convertir campos vacíos en NULL
                 }
             }
@@ -94,10 +107,10 @@ try {
             $codigo_plan = $data[0]; 
             $carrera = $data[1];
             $cohorte = $data[2]; 
-            $numero_alumno = $data[3];
+            $numero_alumno = intval($data[3]);
             $estado_bloqueo = $data[4];
             $causal_bloqueo = $data[5];
-            $run = $data[6];
+            $run = intval($data[6]);
             $dv = $data[7];
             $primer_nombre = $data[8];
             $segundo_nombre = $data[9];
@@ -107,6 +120,7 @@ try {
             $fecha_ultimo_logro = $data[13];
             $ultima_carga = $data[14];
 
+
             // Concatenar nombres
             $nombre_completo = trim($primer_nombre . ' ' . $segundo_nombre);
 
@@ -115,31 +129,34 @@ try {
                 'run' => $run,
                 'nombre' => $nombre_completo,
                 'apellido' => $primer_apellido . ' ' . $segundo_apellido,
-                'correo_personal' => !empty($correo_personal) ? $correo_personal : null, // Establecer como null si está vacío
-                'correo_institucional' => !empty($correo_institucional) ? $correo_institucional : null, // Hacer lo mismo con el correo institucional
+                'correo_personal' => null, // Establecer como null si está vacío
+                'correo_institucional' => null, // Hacer lo mismo con el correo institucional
                 'telefono' => $telefono, // Debes obtener esto correctamente
             ];
 
+            $columnas = ['run', 'nombre', 'apellido', 'correo_personal', 'correo_institucional', 'telefono'];
+
             // Realizar la inserción en persona
-            insertar_en_tabla($db, 'persona', $insert_persona);
+            insertar_en_tabla($db, 'persona', $insert_persona, $columnas);
 
             // Obtener el id_persona de la última inserción
-            $id_persona = $db->lastInsertId();
 
             // Insertar en la tabla estudiante
             $insert_estudiante = [
-                'id_persona' => $id_persona,
                 'cohorte' => $cohorte,
                 'dv' => $dv,
                 'segundo_apellido' => $segundo_apellido,
                 'estado_bloqueo' => $estado_bloqueo,
+                'fecha_logro' => $fecha_ultimo_logro,
                 'ultimo_logro' => $ultimo_logro,
                 'ultima_carga' => $ultima_carga,
-                'numero_alumno' => $numero_alumno,
+                'numero_alumo' => $numero_alumno,
             ];
 
+            $columnas = ['cohorte', 'dv', 'segundo_apellido', 'estado_bloqueo', 'fecha_logro', 'ultimo_logro', 'ultima_carga', 'numero_alumo'];
+
             // Realizar la inserción en estudiante
-            insertar_en_tabla($db, 'estudiante', $insert_estudiante);
+            insertar_en_tabla($db, 'estudiante', $insert_estudiante, $columnas);
         }
         fclose($file_estudiantes);
     } else {

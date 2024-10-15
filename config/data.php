@@ -1,5 +1,5 @@
 <?php
-  $user = 'grupo21'; // acá va su grupo, ejemplo grupoXX
-  $password = 'grupo21'; // acá la contraseña del grupo
-  $databaseName = 'grupo21'; // acá la base de datos debe llamarse así: grupoXX
+  $user = 'grupo31'; // acá va su grupo, ejemplo grupoXX
+  $password = 'grupobacano'; // acá la contraseña del grupo
+  $databaseName = 'grupo31'; // acá la base de datos debe llamarse así: grupoXX
 ?>
