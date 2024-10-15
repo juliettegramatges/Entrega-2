@@ -6,13 +6,12 @@ function procesar_prerequisitos() {
 
     // Abrimos el archivo
     $prerequisitos = fopen($inputFile, "r");
+    stream_filter_append($prerequisitos, 'convert.iconv.ISO-8859-1/UTF-8'); // Convertir la codificación a UTF-8
 
     $array_datos_buenos = [];
     $array_datos_malos = [];
 
-    while (($line = fgets($prerequisitos)) !== FALSE) {
-        $line = iconv('ISO-8859-1', 'UTF-8//TRANSLIT', $line); // Convertimos a UTF-8
-        $datos = str_getcsv($line, ",");
+    while (($datos = fgetcsv($prerequisitos, 1000, ",")) !== FALSE) {
 
         if (empty($datos)) {
             continue; // Borrar tuplas vacías

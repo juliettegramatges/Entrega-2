@@ -19,6 +19,32 @@ function procesar_estudiantes() {
             continue;
         }
 
+        // Eliminar los . de los nombres
+        $datos[8] = str_replace('.', '', $datos[8]);
+        $datos[9] = str_replace('.', '', $datos[9]);
+
+        // Eliminar los . de los apellidos
+        $datos[10] = str_replace('.', '', $datos[10]);
+        $datos[11] = str_replace('.', '', $datos[11]);
+
+        //En Logro, en donde diga QUINTO AÑO se reemplaza por 10 semestre, pero se mantiene el resto
+        $datos[12] = str_replace('QUINTO AÑO', '10 semestre', $datos[12]);
+
+        // En Logro, en donde diga CUARTO AÑO se reemplaza por 8 semestre, pero se mantiene el resto
+        $datos[12] = str_replace('CUARTO AÑO', '8 semestre', $datos[12]);
+
+        // En Logro, en donde diga TERCER AÑO se reemplaza por 6 semestre, pero se mantiene el resto
+        $datos[12] = str_replace('TERCER AÑO', '6 semestre', $datos[12]);
+
+        // En Logro, en donde diga SEGUNDO AÑO se reemplaza por 4 semestre, pero se mantiene el resto
+        $datos[12] = str_replace('SEGUNDO AÑO', '4 semestre', $datos[12]);
+
+
+
+        // En Logro, cuando diga 1 AÑO se reemplaza por 2 semestre, pero se mantiene el resto
+        $datos[12] = str_replace('1 AÑO', '2 semestre', $datos[12]);
+
+
         $es_valido = is_string($datos[0]) && preg_match('/^[A-Z0-9]+$/', $datos[0]) &&  // Plan solo letras mayúsculas y números
                 is_string($datos[1]) && preg_match('/^[A-Za-záéíóúÁÉÍÓÚ\s]+$/', $datos[1]) &&  // Carrera solo letras y espacios
                 preg_match('/^\d{4}\-\d{2}$/', $datos[2]) &&  // Cohorte corresponde a una fecha de tipo YYYY-MM
@@ -30,14 +56,15 @@ function procesar_estudiantes() {
                 is_numeric($datos[6]) && (strlen($datos[6]) == 7 || strlen($datos[6]) == 8) &&
                 // DV: Número de 1 dígito o K
                 (is_numeric($datos[7]) && strlen($datos[7]) == 1 || $datos[7] == 'K') &&
-                // Primer nombre: solo letras y guiones
-                is_string($datos[8]) && preg_match('/^[A-Za-záéíóúÁÉÍÓÚñÑ\s\-]+$/', $datos[8]) &&
-                // Segundo nombre: solo letras y puede ser vacío
-                (is_string($datos[9]) && preg_match('/^[A-Za-záéíóúÁÉÍÓÚñÑ\s\-]+$/', $datos[9]) || empty($datos[9])) &&
-                // Apellido paterno: solo letras
-                is_string($datos[10]) && preg_match('/^[A-Za-záéíóúÁÉÍÓÚñÑ\s\-]+$/', $datos[10]) &&
-                // Apellido materno: opcional
-                (is_string($datos[11]) && preg_match('/^[A-Za-záéíóúÁÉÍÓÚñÑ\s\-]+$/', $datos[11]) || empty($datos[11])) &&
+                // Primer nombre: solo letras, guiones, apóstrofes, y cualquier otro texto excepto comas y puntos
+                is_string($datos[8]) && preg_match('/^[^,\.]+$/', $datos[8]) &&
+                // Segundo nombre: solo letras, guiones, apóstrofes, y cualquier otro texto excepto comas y puntos, puede ser vacío
+                (is_string($datos[9]) && preg_match('/^[^,\.]+$/', $datos[9]) || empty($datos[9])) &&
+                // Apellido paterno: solo letras, guiones, apóstrofes, y cualquier otro texto excepto comas y puntos
+                // Los datos sin apellido paterno se eliminan, ya que no se pueden identificar
+                is_string($datos[10]) && preg_match('/^[^,\.]+$/', $datos[10]) &&
+                // Apellido materno: opcional, solo letras, guiones, apóstrofes, y cualquier otro texto excepto comas y puntos
+                (is_string($datos[11]) && preg_match('/^[^,\.]+$/', $datos[11]) || empty($datos[11])) &&
                 // Logro: string
                 is_string($datos[12]) &&
                 // Fecha logro: fecha en formato YYYY-MM
