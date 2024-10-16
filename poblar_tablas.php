@@ -163,6 +163,82 @@ try {
         echo "Error al abrir el archivo $path_estudiantes\n";
     }
 
+    echo "INICIO DE INSERCIÓN DE DATOS EN LA TABLA ESTUDIANTE\n";
+
+    // Abrir el archivo de estudiantes
+    $path_estudiantes = $path_tablas['estudiantes'];
+    $file_estudiantes = fopen($path_estudiantes, 'r');
+
+    if ($file_estudiantes) {
+        while (($data = fgetcsv($file_estudiantes, 0, ',')) !== false) {
+            // Verificar restricciones antes de insertar
+            for ($i = 0; $i < count($data); $i++) {
+                if ($data[$i] === "") {
+                    $data[$i] = null; // Convertir campos vacíos en NULL
+                }
+            }
+
+            $codigo_plan = $data[0]; 
+            $carrera = $data[1];
+            $cohorte = $data[2]; 
+            $numero_alumno = intval($data[3]);
+            $estado_bloqueo = $data[4];
+            $causal_bloqueo = $data[5];
+            $run = intval($data[6]);
+            $dv = $data[7];
+            $primer_nombre = $data[8];
+            $segundo_nombre = $data[9];
+            $primer_apellido = $data[10];
+            $segundo_apellido = $data[11];
+            $ultimo_logro = $data[12];
+            $fecha_ultimo_logro = $data[13];
+            $ultima_carga = $data[14];
+
+
+            // Concatenar nombres
+            $nombre_completo = trim($primer_nombre . ' ' . $segundo_nombre);
+
+            // Insertar en la tabla persona
+            $insert_persona = [
+                'run' => $run,
+                'nombre' => $nombre_completo,
+                'apellido' => $primer_apellido . ' ' . $segundo_apellido,
+                'correo_personal' => null, // Establecer como null si está vacío
+                'correo_institucional' => null, // Hacer lo mismo con el correo institucional
+                'telefono' => $telefono, // Debes obtener esto correctamente
+            ];
+
+            $columnas = ['run', 'nombre', 'apellido', 'correo_personal', 'correo_institucional', 'telefono'];
+
+            // Realizar la inserción en persona
+            insertar_en_tabla($db, 'persona', $insert_persona, $columnas);
+
+            // Obtener el id_persona de la última inserción
+
+            // Insertar en la tabla estudiante
+            $insert_estudiante = [
+                'cohorte' => $cohorte,
+                'dv' => $dv,
+                'segundo_apellido' => $segundo_apellido,
+                'estado_bloqueo' => $estado_bloqueo,
+                'fecha_logro' => $fecha_ultimo_logro,
+                'ultimo_logro' => $ultimo_logro,
+                'ultima_carga' => $ultima_carga,
+                'numero_alumo' => $numero_alumno,
+            ];
+
+            $columnas = ['cohorte', 'dv', 'segundo_apellido', 'estado_bloqueo', 'fecha_logro', 'ultimo_logro', 'ultima_carga', 'numero_alumo'];
+
+            // Realizar la inserción en estudiante
+            insertar_en_tabla($db, 'estudiante', $insert_estudiante, $columnas);
+        }
+        fclose($file_estudiantes);
+    } else {
+        echo "Error al abrir el archivo $path_estudiantes\n";
+    }
+
+
+
 } catch (Exception $e) {
     echo "Error al cargar datos: " . $e->getMessage();
 }

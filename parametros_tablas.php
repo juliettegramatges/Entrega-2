@@ -46,7 +46,44 @@ $tablas_iniciales = array(
             jerarquia VARCHAR(255), 
             cargo VARCHAR(255),
             jornada VARCHAR(255)
-        '
+        ',
+
+
+        'plan_estudios' => '
+            id_plan SERIAL PRIMARY KEY,
+            codigo INT NOT NULL,
+            fecha_inicio DATE NOT NULL,
+            id_curso_asociado 
+        ',
+
+        'curso' => '
+            id_curso SERIAL PRIMARY KEY,
+            sigla  INT NOT NULL, 
+            nombre VARCHAR(255) NOT NULL,
+            caracter VARCHAR(255), 
+            nivel VARCHAR(255),
+            ciclo VARCHAR(255)
+        ',
+
+        'associacion_plan_curso' => '
+            id_asignatura INT NOT NULL,
+            id_plan INT NOT NULL,
+            PRIMARY KEY (id_curso, id_plan),
+            FOREIGN KEY (id_curso) REFERENCES curso(id_curso),
+            FOREIGN KEY (id_plan) REFERENCES plan(id_plan)
+        ',
+
+        'historial_academico' => '
+            id_estudiante INT NOT NULL,
+            id_curso INT NOT NULL,
+            nota FLOAT NOT NULL,
+            calificacion VARCHAR(255),
+            descripcion VARCHAR(255),
+            PRIMARY KEY (id_estudiante, id_curso),
+            FOREIGN KEY (id_estudiante) REFERENCES estudiante(id_estudiante),
+            FOREIGN KEY (id_curso) REFERENCES curso(id_curso)
+        ',
+
     );
     
 ?>

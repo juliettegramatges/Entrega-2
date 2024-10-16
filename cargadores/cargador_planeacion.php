@@ -98,7 +98,4 @@ function procesar_planeacion() {
     fclose($archivo_malos); // Cerrar el archivo de malos
 }
 
-// Llamar a la función
-procesar_planeacion();
-
 ?>

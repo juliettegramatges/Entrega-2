@@ -9,6 +9,12 @@ procesar_docentes_planificados();
 require 'cargadores/cargador_estudiante.php'; 
 procesar_estudiantes();
 
+require 'cargadores/cargador_planeacion.php'; 
+procesar_planeacion();
+
+require 'cargadores/cargador_prerequisito.php'; 
+procesar_prerequisitos();
+
 
 # 2. corregir bases datos filtrados
 
@@ -17,6 +23,13 @@ corregir_asignaturas();
 
 require 'correcciones/cargador_docentes_malos.php'; 
 corregir_docentes();
+
+require 'correcciones/corrector_planeacion.php'; 
+corregirPlaneacion();
+
+require 'correcciones/corrector_prerequisito.php'; 
+corregirPrerequisitos();
+
 
 
 require_once('config/conexion.php');
