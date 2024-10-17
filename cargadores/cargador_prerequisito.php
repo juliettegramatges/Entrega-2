@@ -36,17 +36,22 @@ function procesar_prerequisitos() {
                     // Prerequisitos pueden ser un entero de 4 dígitos, ingreso, egreso, B, L, B v L, o vacío.
                     (ctype_digit($datos[5]) || in_array($datos[5], ['ingreso', 'egreso', 'B', 'L', 'B v L']) || empty($datos[5])) ;
 
-
         // El código de la asignatura se guarda quitando el código de $datos[0]
         $datos[1] = substr($datos[1], 3);
 
         if ($es_valido) {
-            $array_datos_buenos[] = $datos; // If valid, add to the good array
+            // Serializa los datos para poder eliminar duplicados
+            $array_datos_buenos[] = serialize($datos);
         } else {
-            $array_datos_malos[] = $datos; // If not valid, add to the bad array
+            $array_datos_malos[] = $datos; // Si no es válido, agregar al array de datos malos
         }
     }
     fclose($prerequisitos);
+
+    // Eliminar duplicados en los datos buenos
+    $array_datos_buenos = array_unique($array_datos_buenos);
+    // Deserializa los datos de vuelta a su forma original
+    $array_datos_buenos = array_map('unserialize', $array_datos_buenos);
 
     // Aguardamos archivos buenos
     $archivo_buenos = fopen($outputFile, "w");
@@ -73,7 +78,7 @@ function procesar_prerequisitos() {
         fputcsv($archivo_malos, $prerequisitos_malas);
     }
     fclose($archivo_malos);
-
 }
+
 
 ?>

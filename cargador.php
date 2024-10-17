@@ -15,6 +15,12 @@ procesar_planeacion();
 require 'cargadores/cargador_prerequisito.php'; 
 procesar_prerequisitos();
 
+require 'cargadores/cargador_notas.php'; 
+validar_archivo_notas();
+
+require 'cargadores/cargador_planes.php'; 
+validar_archivo_planes();
+
 
 # 2. corregir bases datos filtrados
 
@@ -32,10 +38,7 @@ corregirPrerequisitos();
 
 
 
-require_once('config/conexion.php');
-require_once('crear_tablas.php');
-require_once('poblar_tablas.php');
+// require_once('config/conexion.php');
+// require_once('crear_tablas.php');
+// require_once('poblar_tablas.php');
 echo "TODO LISTO";
-
-
-?>

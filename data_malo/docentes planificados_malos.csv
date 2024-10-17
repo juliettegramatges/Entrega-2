@@ -9,6 +9,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;10;HONORARIO;diurno;;;;LICENCIATURA;PROFESOR TITULAR DOCENTE;;Acadï¿½mico
 ;;;;;;20;FULL TIME;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;HONORARIO;;;;;;ASISTENTE REGULAR;;
+15059751;Rufus;Scrimgeour;456789022;rufus.scrimgeour.devia@coldmail.com;rufus.scrimgeour.devia@lamejor.com;;HONORARIO;diurno;;HOGWARTS;MAGIA;LICENCIATURA;TITULAR REGULAR;;
 ;;;;;;;HONORARIO;diurno;;;;DOCTORA;ASOCIADA DOCENTE;;
 ;;;;;;10;HONORARIO;;vespertino;;;MAGISTER;SIN JERARQUIZAR;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;vespertino;;;MAGISTER;PROFESOR ASOCIADO DOCENTE;;Acadï¿½mico
@@ -16,16 +17,21 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 21423313;Sï¿½ptima;Vector;789012355;septima.vector@yeeha.com;septima.vector@lamejor.com;;FULL TIME;diurno;vespertino;HOGWARTS;MAGIA;DOCTOR;ASISTENTE DOCENTE;Director (a) Formaciï¿½n Cont. y Postgra;
+20082984;Vernon;Dursley;789012356;vernon.dursley.renard@yeeha.com;vernon.dursley.renard@lamejor.com;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
+22035082;JK;Rowling;456789021;hkrowling@editorial.edito;hkrowling@lamejor.com;;FULL TIME;diurno;vespertino;HOGWARTS;MAGIA;;ASOCIADO DOCENTE;Profesor por Jornada;
 17241044;Voldemort;Seï¿½orOscuro;234567902;voldemort.senoroscuros.elinnombrable@gmall.com;voldemort.senoroscuros.elinnombrable@lamejor.com;-1;FULL TIME;diurno;;HOGWARTS;MAGIA;MAGISTER;ASOCIADO REGULAR;Profesor por Jornada;
+19457329;Fleur;Delacour;678901238;fleur.delacour.diaz@gmall.com;fleur.delacour.diaz@lamejor.com;;FULL TIME;diurno;vespertino;BEAUXBATON;;LICENCIATURA;INSTRUCTORA DOCENTE;Secretaria Estudios;
 ;;;;;;20;;;;;;;;Administrativo;Administrativo
 ;;;;;;40;;;;;;;;Tï¿½cnico Contable;Administrativo
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;INSTRUCTOR DOCENTE;;
 23677609;Daphne;Greengrass;345678904;daphne.greengrass@michea.com;daphne.greengrass@lamejor;;HONORARIO;diurno;;BEAUXBATON;;MAGISTER;INSTRUCTOR DOCENTE;;
+15089005;Bellatrix;Lestrange;234567892;bellatrix.lestrange.beltran@gmall.com;bellatrix.lestrange.beltran@lamejor.com;;HONORARIO;diurno;;;;MAGISTER;TITULAR REGULAR;;
 24017462;Steve; Kloves;;;;;;;;;;;;;
 12684784-K;;;;;;40;;;;;;;;Secretario (a) de Direcciï¿½n;Administrativo
 ;;;;;;;HONORARIO;;;;;;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER ;INSTRUCTORA DOCENTE;;
 ;araya MARIN,  OLGA sonia;;;;;40;;;;;;;;Asistente;Administrativo
+19064170;Gilderoy;Lockhart;901234571;gilderoy.lockhart@yeeha.com;gilderoy.lockhart@lamejor.com;;HONORARIO;diurno;;BEAUXBATON;HECHICERï¿½A;DOCTOR ;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;ASISTENTE DOCENTE;;
 ;;;;;;40;FULL TIME;;;;;0;TITULAR DOCENTE;Acadï¿½mico Investigador;Acadï¿½mico
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;ASISTENTE DOCENTE;;
@@ -80,11 +86,14 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 21103479;Harry;Potter;;harry.potter.badilla@yeeha.com;harry.potter.badilla@lamejor.com;;;;;;;DOCTOR;;;
 21673365;Irman.;Pince;;irma.pince@coldmail.com;irma.pince@lamejor.com;;;;;;;;;;
+13827502;Remus;Lupin;678901243;remus.lupin.barrientos@yeeha.com;remus.lupin.barrientos@lamejor.com;;FULL TIME;diurno;;HOGWARTS;MAGIA;MAGISTER;TITULAR DOCENTE;Profesor 1/2 Jornada;
 ;;;;;;;HONORARIO;;vespertino;;;0;INSTRUCTOR DOCENTE;;
 ;;;;;;;JORNADA;diurno;vespertino;;;DOCTOR;ASISTENTE REGULAR;Profesor por Jornada;
+11057406;Filius;Flitwick;456789016;filius.flitwick@coldmail.com;filius.flitwick@lamejor.com;;HONORARIO;diurno;;BEAUXBATON;HECHICERï¿½A;MAGISTER;SIN JERARQUIZAR;;
 ;;;;;;10;HONORARIO;diurno;;;;Bachiller;ASISTENTE DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;vespertino;;;MAGISTER;PROFESOR TITULAR DOCENTE;;Acadï¿½mico
+12972527;Seamus;Finnigan;678901244;seamus.finnigan.contreras@coldmail.com;seamus.finnigan.contreras@lamejor.com;;HONORARIO;diurno;;HOGWARTS;MAGIA;MAGISTER;ASOCIADO DOCENTE;;
 100;POR;DESIGNAR;;;;;;;;;;MAGISTER;ASISTENTE REGULAR;;
 4010;POR;DESIGNAR;;;;;;;;;;;;;
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
@@ -111,8 +120,10 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;;;;;;PROFESOR ASOCIADO DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;LICENCIATURA;SIN JERARQUIZAR;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;vespertino;;;MAGISTER;INSTRUCTOR DOCENTE;;Acadï¿½mico
+12791816;Xenophilius;Lovegood;456789024;xenophilius.lovegood.gonzalez@coldmail.com;xenophilius.lovegood.gonzalez@lamejor.com;;HONORARIO;;vespertino;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
+14064936;Angelina;Johnson;456789013;angelina.johnson.reyes@yeeha.com;angelina.johnson.reyes@lamejor.com;;HONORARIO;diurno;;BEAUXBATON;MAGIA;LICENCIATURA;SIN JERARQUIZAR;;
 ;;;;;;;HONORARIO;;;;;;INSTRUCTOR DOCENTE;;Acadï¿½mico
 ;;;;;;;JORNADA;diurno;vespertino;;;0;ASOCIADO DOCENTE;Director(a) Carrera;
 ;;;;;;;HONORARIOï¿½;diurno;;;;MAGISTER;;;Acadï¿½mico
@@ -128,6 +139,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;;vespertino;;;MAGISTER;INSTRUCTOR DOCENTE;;
 ;;;;;;;JORNADA;diurno;vespertino;;;MAGISTER;ASOCIADO DOCENTE;Profesor por Jornada;
 ;;;;;;10;HONORARIO;diurno;;;;LICENCIATURA;;;Acadï¿½mico
+21904102;Petunia;Dursley;890123464;petunia.dursley.jeraldo@gmall.com;petunia.dursley.jeraldo@lamejor.com;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
 22336345;Blaise;Zabini;;blaise.zabini.pardo@gmall.com;blaise.zabini.pardo@lamejor.com;;;;;;;;;;
 ;;;;;;;JORNADA;;vespertino;;;MAGISTER;ASOCIADO DOCENTE;Director(a) Carrera;
 ;;;;;;10;HONORARIO;diurno;;;;LICENCIATURA;PROFESOR TITULAR DOCENTE;;Acadï¿½mico
@@ -168,6 +180,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;HONORARIO;;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
+20354821;Quirinus;Quirrell;567890132;quirinus.quirrell@yeeha.com;quirinus.quirrell@lamejor.com;;FULL TIME;diurno;vespertino;HOGWARTS;MAGIA;;TITULAR DOCENTE;Profesor por Jornada;
 ;;;;;;;HONORARIO;;;;;;SIN CONOCIMIENTO;;
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
 ;;;;;;;HONORARIO;;;;;;INSTRUCTOR DOCENTE;;
@@ -176,6 +189,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;10;HONORARIO;;;;;;SIN JERARQUIZAR;;Acadï¿½mico
 ;;;;;;40;FULL TIME;diurno;vespertino;;;DOCTOR;PROFESOR ASISTENTE REGULAR;;Acadï¿½mico
 12193904;Silvanusn.;Kettleburn;901234577;silvanus.kettleburn@gmall.com;silvanus.kettleburn@lamejor.com;;HONORARIO;;vespertino;HOGWARTS;MAGIA;MAGISTER;ASOCIADO DOCENTE;;
+14183901;Terry;Boot;567890134;terry.boot.diaz@coldmail.com;terry.boot.diaz@lamejor.com;;FULL TIME;;vespertino;HOGWARTS;MAGIA;MAGISTER;ASOCIADO DOCENTE;Director Inst. Investigaciï¿½n y Postgra;
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;TITULAR DOCENTE;;
 ;;;;;;40;FULL TIME;diurno;vespertino;;;0;COMISIï¿½N SUPERIOR ASOCIADO REGULAR;Director(a) Carrera;Acadï¿½mico
 ;;;;;;40;FULL TIME;diurno;vespertino;;;MAGISTER;PROFESOR TITULAR DOCENTE;;Acadï¿½mico
@@ -185,10 +199,13 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 15992956;Dolores;Umbridge;;dolores.umbridge@coldmail.com;dolores.umbridge@lamejor.com;;;;;;;LICENCIATURA;;;
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 8761982;Helga ;Hufflepuff;;helga.hufflepuff.bozo@coldmail.com;helga.hufflepuff.bozo@lamejor.com;;;;;;;DOCTOR;;;
+20638852;Sirius;Black;234567901;sirius.black.esquivel@coldmail.com;sirius.black.esquivel@lamejor.com;;FULL TIME;diurno;;HOGWARTS;MAGIA;MAGISTER;ASOCIADA REGULAR;Director (a) Centro de Sol. Colab.de C;
 ;;;;;;10;HONORARIO;;vespertino;;;0;PROFESOR ASOCIADO DOCENTE;;Acadï¿½mico
+12758128;Argus;Filch;678901235;argus.filch@gmall.com;argus.filch@lamejor.com;;HONORARIO;diurno;;BEAUXBATON;;DOCTOR ;ASISTENTE DOCENTE;;
 ;;;;;;40;FULL TIME;diurno;vespertino;;;DOCTOR;PROFESOR ASOCIADO REGULAR;Director Depto.ï¿½;Acadï¿½mico
 ;;;;;;;JORNADA;diurno;;;;MAGISTER;TITULAR DOCENTE;Profesor 1/2 Jornada;
 122637826;;;;;;40;FULL TIME;;;;;;;Secretaria - Escuela;Administrativo
+24009027;Neville;Longbottom;234567898;neville.longbottom.valenzuela@gmall.com;neville.longbottom.valenzuela@lamejor.com;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;vespertino;;;LICENCIATURA;TITULAR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;COMISIï¿½N SUPERIOR ASOCIADA DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;Acadï¿½mico
@@ -199,6 +216,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;;vespertino;;;MAGISTER;PROFESOR ASOCIADO DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;;vespertino;;;0;INSTRUCTOR DOCENTE;;Acadï¿½mico
 ;;;;;;;HONORARIO;;;;;;ASOCIADA DOCENTE;;
+16901248;Hermione;Granger;890123461;hermione.granger.benavides@coldmail.com;hermione.granger.benavides@lamejor.com;;HONORARIO;diurno;;BEAUXBATON; HECHICERï¿½A;DOCTOR;ASOCIADA DOCENTE;;
 21713351;Cormac;McLaggen;890123458;cormac.mclaggen@valenzuela.com;cormac.mclaggen@lamejor;;HONORARIO;diurno;;;;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;;JORNADA;diurno;vespertino;;;MAGISTER;ASISTENTE DOCENTE;Coord. de Seguimiento y Apoyo al Egres;
 ;;;;;;;HONORARIO;diurno;vespertino;;;0;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
@@ -206,6 +224,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;10;HONORARIO;;vespertino;;;MAGISTER;COMISIï¿½N SUPERIOR ASOCIADO DOCENTE;;Acadï¿½mico
 ;;;;;;;HONORARIO;;;;;;INSTRUCTORA DOCENTE;;Acadï¿½mico
 ;;;;;;20;FULL TIME;diurno;;;;MAGISTER;PROFESOR TITULAR DOCENTE;;Acadï¿½mico
+15155275;Pansy;Parkinson;567890131;pansy.parkinson.larroucau@coldmail.com;pansy.parkinson.larroucau@lamejor.com;;FULL TIME;;vespertino;HOGWARTS;MAGIA;MAGISTER;INSTRUCTOR DOCENTE;;
 12866079;Colin;Creevey;;colin.creevey.bermudez@gmall.com;colin.creevey.bermudez@lamejor.com;;;;;;;;;;
 ;;;;;;;HONORARIO;diurno;vespertino;;;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;DOCTORï¿½;ASISTENTE DOCENTE;;Acadï¿½mico
@@ -245,22 +264,26 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 11682760;Amycus;Carrow;;amycus.carrow@yeeha.com;amycus.carrow@lamejor.com;;;diurno;vespertino;;;;;;
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;JORNADA;diurno;vespertino;;;DOCTOR;ASOCIADO REGULAR;Director Depto;academico
+24496460;Parvati;Patil;678901242;parvati.patil.pardo@yeeha.com;parvati.patil.pardo@lamejor.com;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;LICENCIATURA;ASOCIADO DOCENTE;;
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;HONORARIO;diurno;vespertino;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
 19690944;Lavender;Brown;;lavender.brown@torralbo.com;lavender.brown@lamejor;;;;;;;;;;
 ;;;;;;40;FULL TIME;diurno;vespertino;;;DOCTOR;;Acadï¿½mico Investigador;Acadï¿½mico
 ;;;;;;;JORNADA;diurno;vespertino;;;MAGISTER;ASOCIADO DOCENTE;Decano(a);
 ;;;;;;;JORNADA;diurno;;;;LICENCIATURA;INSTRUCTOR DOCENTE;Director Clï¿½nica ;academico
+19465195;Theodore;Nott;678901245;theodore.nott.plaza@gmall.com;theodore.nott.plaza@lamejor.com;;HONORARIO;diurno;;HOGWARTS;MAGIA;LICENCIATURA;INSTRUCTOR DOCENTE;;
 19525663;Susan;Bones;345678912;susan.bones@poncedeleon.com;susan.bones@@lamejor;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;40;FULL TIME;;;;;0;PROFESOR ASOCIADO DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;HONORARIO;;;;;;INSTRUCTORA DOCENTE;;
 ;;;;;;40;FULL TIME;diurno;vespertino;;;MAGISTER;;Secretario(a) Estudios;Acadï¿½mico
 123712616;;;;;;40;FULL TIME;;;;;;;Secretaria - Escuela;Administrativo
+13567862;Dean;Thomas;456789015;dean.thomas.basaez@yeeha.com;dean.thomas.basaez@lamejor.com;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 19028250;Kingsley;Shacklebolt;;kingsley.shacklebolt.perez@gmall.com;kingsley.shacklebolt.perez@lamejor.com;;;;;;;;;;
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;JORNADA;diurno;;;;MAGISTER;ASOCIADO DOCENTE;Director(a) Escuela;
 ;;;;;;10;HONORARIO;;vespertino;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
+20537459;Alastor;Moody;678901234;alastor.moody.munita@coldmail.com;alastor.moody.munita@lamejor.com;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;Profesor por Jornada;
 ;;;;;;40;FULL TIME;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
 ;;;;;;;HONORARIO;;vespertino;;;MAGISTER;ASOCIADO DOCENTE;;
@@ -279,8 +302,10 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;40;FULL TIME;;;;;;;Secretaria - Escuela;Administrativo
 6012;DESIGNAR;POR;;;;;;;;;;DOCTORA;INSTRUCTOR DOCENTE;Profesor por Jornada;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;ASISTENTE DOCENTE;;
+23116742;Dolores;Umbridge;789012348;dolores.umbridge.baquerizo@coldmail.com;dolores.umbridge.baquerizo@lamejor.com;;HONORARIO;diurno;;;;LICENCIATURA;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;;;Acadï¿½mico
+20364718;Rolanda;Hooch;890123465;rolanda.hooch@coldmail.com;rolanda.hooch@lamejor.com;;FULL TIME;;;HOGWARTS;MAGIA;;ASOCIADO DOCENTE;Director(a) Carrera (i);
 ;;;;;;;HONORARIO;;vespertino;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;40;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
@@ -290,7 +315,9 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;10;HONORARIO;;;;;;PROFESORA ASISTENTE DOCENTE;;Acadï¿½mico
+17754798;Draco;Malfoy;901234570;draco.malfoy.yanez@gmall.com;draco.malfoy.yanez@lamejor.com;;HONORARIO;diurno;;;;MAGISTER;ASOCIADA DOCENTE;;
 22671518;Mike ;Newell;;;;;;;;;;;;;
+10693674;Percy;Weasley;789012353;percy.weasley.silva@coldmail.com;percy.weasley.silva@lamejor.com;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;LICENCIATURA;TITULAR DOCENTE;;
 ;;;;;;40;FULL TIME;;;;;0;PROFESOR ASISTENTE REGULAR;;Acadï¿½mico
 9017415;Albus;Dumbledore;890123456;albus.dumbledore@coldmail.com;albus.dumbledore@lamejor.com;;FULL TIME;diurno;;;;DOCTOR;ASISTENTE DOCENTE;Director(a) Carrera;
 ;;;;;;40;FULL TIME;;vespertino;;;DOCTOR;ASISTENTE REGULAR;Director delï¿½ ï¿½rea;Acadï¿½mico
@@ -300,18 +327,23 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;ASOCIADA DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;ASISTENTE DOCENTE;;
+12949268;Molly;Weasley;890123463;molly.weasley.robles@gmall.com;molly.weasley.robles@lamejor.com;;FULL TIME;diurno;vespertino;HOGWARTS;MAGIA;BACHILLER;ASOCIADO REGULAR;Secretario(a) Estudios;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;SIN JERARQUIZAR;;
+19609585;Anthony;Goldstein;567890124;anthony.goldstein.contreras@gmall.com;anthony.goldstein.contreras@lamejor.com;;HONORARIO;diurno;;;;MAGISTER ;ASOCIADA DOCENTE;;
 ;;;;;;;HONORARIO;;vespertino;;;LICENCIATURA;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;SIN JERARQUIZAR;;
 16462378;Cho;Chang;;cho.chang.gallo@coldmail.com;cho.chang.gallo@lamejor.com;;;;;;;;;;
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;INSTRUCTOR DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;LICENCIATURA;;;Acadï¿½mico
+23184735;Severus;Snape;890123466;severus.snape@yeeha.com;severus.snape@lamejor.com;;FULL TIME;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;Director (a) Formaciï¿½n Cont. y Postgra;
+19406721;Sybill;Trelawney;456789023;sybill.trelawney@gmall.com;sybill.trelawney@lamejor.com;;HONORARIO;diurno;;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;JORNADA;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;Coord. de Clï¿½nicaï¿½;Acadï¿½mico
 ;;;;;;;HONORARIO;;vespertino;;;0;ASOCIADO DOCENTE;;
 ;;;;;;;HONORARIO;;;;;;TITULAR DOCENTE;;
 ;;;;;;;HONORARIO;;;;;;ASISTENTE DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;SIN JERARQUIZAR;;
+24719317;Lucius;Malfoy;345678908;lucius.malfoy.aguilera@yeeha.com;lucius.malfoy.aguilera@lamejor.com;;HONORARIO;diurno;;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;40;FULL TIME;diurno;vespertino;;;DOCTOR;ASOCIADO REGULAR;Acadï¿½mico Investigador;Acadï¿½mico
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 ;;;;;;;HONORARIO;diurno;;;;LICENCIATURA;INSTRUCTOR DOCENTE;;
@@ -320,6 +352,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 13645935;Horace;Slughorn;;horace.slughorn@gmall.com;horace.slughorn@lamejor.com;;;;;;;;;;
 21982013;Rowena; Ravenclaw;234567900;rowena.ravenclaw.vargas@gmall.com;rowena.ravenclaw.vargas@lamejor.com;;HONORARIO;;vespertino;HOGWARTS;MAGIA;MAGISTER;ASISTENTE DOCENTE;;
 ;;;;;;40;FULL TIME;;nocturno;;;DOCTOR;PROFESOR ASOCIADO DOCENTE;Director Inst. Investigaciï¿½n y Postgra;Acadï¿½mico
+22125739;Ron;Weasley;901234576;ron.weasley.irarrazabal@gmall.com;ron.weasley.irarrazabal@lamejor.com;;FULL TIME;diurno;;HOGWARTS;MAGIA;;INSTRUCTOR DOCENTE;Director Clï¿½nica ;academico
 ;;;;;;;JORNADA;diurno;vespertino;;;DOCTOR;ASOCIADO REGULAR;Acadï¿½mico Investigador;
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;;JORNADA;;vespertino;;;DOCTOR;ASISTENTE REGULAR;Coordinador de Investigacion;
@@ -331,6 +364,7 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;;HONORARIO;;;;;;INSTRUCTOR DOCENTE;;
 ;;;;;;10;HONORARIO;;;;;;INSTRUCTOR DOCENTE;;Acadï¿½mico
 ;;;;;;;HONORARIO;diurno;vespertino;;;MAGISTER;INSTRUCTOR DOCENTE;;
+16563364;Zacharias;Smith;567890135;zacharias.smith@yeeha.com;zacharias.smith@lamejor.com;;HONORARIO;diurno;;HOGWARTS;MAGIA;MAGISTER;INSTRUCTOR DOCENTE;;
 9734595;Alicia;Spinnet;;alicia.spinnet.bascunan@gmall.com;alicia.spinnet.bascunan@lamejor.com;;;;;;;;;;
 ;;;;;;;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
 ;;;;;;40;FULL TIME;diurno;vespertino;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;Coord. de Seguimiento y Apoyo al Egres;Acadï¿½mico
@@ -360,9 +394,13 @@ RUN;Nombre;Apellido P;telefono;email personal;email  institucional;DEDICACIï¿�
 ;;;;;;20;FULL TIME;diurno;;;;DOCTORA;COMISIï¿½N SUPERIOR ASOCIADA DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;;vespertino;;;MAGISTER;PROFESOR ASISTENTE DOCENTE;;Acadï¿½mico
 ;;;;;;10;HONORARIO;diurno;;;;MAGISTER;;;Acadï¿½mico
+22630533;Alecto;Carrow;901234567;alecto.carrow@gmall.com;alecto.carrow@lamejor.com;;HONORARIO;diurno;;;;LICENCIATURA;ASISTENTE DOCENTE;;
+20454143;Cedric;Diggory;456789014;cedric.diggory.diaz@yeeha.com;cedric.diggory.diaz@lamejor.com;;HONORARIO;diurno;;;;MAGISTER;INSTRUCTOR DOCENTE;;
 13185805;Godric ;Gryffindor;;godric.gryffindor.stippel@yeeha.com;godric.gryffindor.stippel@lamejor.com;;;;;;;;;;
 ;;;;;;40;FULL TIME;diurno;vespertino;;;MAGISTER;PROFESOR ASOCIADO DOCENTE;;Acadï¿½mico
+16185180;Michael;Corner;678901241;michael.corner.vargas@yeeha.com;michael.corner.vargas@lamejor.com;;FULL TIME;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;ASOCIADO DOCENTE;Director(a) Carrera;
 ;;;;;;10;HONORARIO;;;;;;INSTRUCTOR DOCENTE;;Acadï¿½mico
+10300778;Rubeus;Hagrid;345678911;rubeus.hagrid@yeeha.com;rubeus.hagrid@lamejor.com;;HONORARIO;diurno;vespertino;HOGWARTS;MAGIA;MAGISTER;TITULAR DOCENTE;;
 ;;;;;;10;HONORARIO;;;;;;;;Acadï¿½mico
 11822639;Salazar ;Slytherin;567890133;salazar.slytherin.avila@yeeha.com;salazar.slytherin.avila@lamejor.com;;HONORARIO;;vespertino;HOGWARTS;MAGIA;MAGISTER;ASOCIADO DOCENTE;;
 ;;;;;;;;;;;;;INSTRUCTORA DOCENTE;;
