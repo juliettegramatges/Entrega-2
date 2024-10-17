@@ -12,8 +12,8 @@
         <label class="form-label" for="email">Correo electrónico:</label>
         <input class="form-input" type="email" id="email" name="email" required>
         
-        <label class="form-label" for="password">Contraseña:</label>
-        <input class="form-input" type="password" id="password" name="password" required>
+        <label class="form-label" for="contraseña">Contraseña:</label>
+        <input class="form-input" type="contraseña" id="contraseña" name="contraseña" required>
         
         <button class="form-button" type="submit">Ingresar</button>
     </form>

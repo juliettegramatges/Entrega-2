@@ -15,11 +15,11 @@ procesar_planeacion();
 require 'cargadores/cargador_prerequisito.php'; 
 procesar_prerequisitos();
 
-require 'cargadores/cargador_notas.php'; 
-validar_archivo_notas();
-
 require 'cargadores/cargador_planes.php'; 
 validar_archivo_planes();
+
+require 'cargadores/cargador_notas.php'; 
+validar_archivo_notas();
 
 
 # 2. corregir bases datos filtrados

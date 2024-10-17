@@ -12,6 +12,8 @@ try {
     $file_estudiantes = fopen($path_estudiantes, 'r');
     $path_cursos = $path_tablas['asignaturas'];
     $file_cursos = fopen($path_cursos, 'r');
+    $path_notas = $path_tablas['notas'];
+    $file_notas = fopen($path_notas, 'r');
 
     echo "INSERTANDO DATOS DE ACADEMICO\n";
 
@@ -191,8 +193,30 @@ try {
         $columnas = ['sigla', 'nombre', 'nivel'];
         insertar_en_tabla($db, 'curso', $insert_curso, $columnas);
         }
-
         fclose($file_cursos);
+
+        echo "INSERTANDO DATOS DE NOTAS\n";
+
+        // Insertar estudiantes
+        while (($data = fgetcsv($file_notas, 0, ',')) !== false) {
+            for ($i = 0; $i < count($data); $i++) {
+                $data[$i] = $data[$i] === "" ? null : $data[$i];
+            }
+                $sigla = $data[1];
+                $nombre = $data[2]; 
+                $nivel = $data[3];
+                $id_plan_estudio = $data[0];
+        
+            $insert_notas = [
+                'nota' => $nota,
+                'calificacion' => $calificacion, 
+                'descripcion' => $descripcion,
+            ];
+            $columnas = ['sigla', 'nombre', 'nivel'];
+            insertar_en_tabla($db, 'curso', $insert_curso, $columnas);
+            }
+            fclose($file_cursos);
+
 
     echo "INSERCIÓN COMPLETADA\n";
 
